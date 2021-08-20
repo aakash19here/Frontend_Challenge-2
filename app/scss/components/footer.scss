@@ -1,0 +1,40 @@
+@use '../util' as *;
+
+.footer{
+    background-color: var(--main-bg);
+    display: grid;
+    // align-items: center;
+    // justify-items: center;
+    grid-template-rows: repeat(4,1fr);
+    max-height: 60vh;
+    @include breakpoint(large){
+        max-height: 40vh;
+        grid-template-columns: repeat(4,1fr);
+    }
+    &__firstitem{
+        span{
+            padding-right: rem(8);
+        }
+        padding: rem(30) 0;
+        color: white;
+    }
+    &__seconditem{
+        color: white;
+        span{
+            padding-right: rem(8);
+        }
+        color: white;
+        @include breakpoint(large){
+            align-self: center;
+            padding-left: rem(40);
+        }
+    }
+    &__thirditem,&__fourthitem{
+        color: white;
+        @include breakpoint(large){
+            align-self: center;
+            justify-self: center;
+            color: #fff;
+        }
+    }
+}

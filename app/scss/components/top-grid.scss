@@ -1,0 +1,70 @@
+@use '../util' as *;
+
+.top__grid{
+    margin-top: rem(100);
+    display: grid;
+    row-gap: rem(70);
+    @include breakpoint(large){
+        grid-template-columns: repeat(2 ,1fr);
+        grid-template-rows: repeat(2,1fr);
+        gap: rem(40) rem(70);
+    }
+    .top__grid--access{
+        h3{
+            color: #fff;
+            margin-top: rem(30);
+        }
+        h4{
+            color: gray;
+        }
+        img{
+            display: block;
+        }
+    }
+}
+.top__productive{
+    display: grid;
+    margin-top: rem(70);
+    margin-bottom: rem(50);
+    @include breakpoint(large){
+        grid-template-columns: repeat(2,1fr);
+    }
+    img{
+        width: 100%;
+        width: rem(283);
+        height: rem(211);
+        @include breakpoint(large){
+            width: rem(610);
+            height: rem(469);
+        }
+    }
+    &--desc{
+        margin: auto;
+        
+        p:nth-child(1){
+            font-size: rem(25);
+            color: #fff;
+            font-weight: 400;
+            margin-top: rem(30);
+            @include breakpoint(large){
+                font-size: rem(50);
+            }
+        }
+        p{
+            color: gray;
+            @include breakpoint(large){
+                font-size:rem(20);
+            }
+        }
+        a{
+        
+            color: var(--btn-gradient-1);
+            text-decoration: underline;
+            font-size: rem(20);
+            img{
+                width: rem(20);
+                height: rem(20);
+            }
+        }
+    }
+}

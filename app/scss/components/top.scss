@@ -1,0 +1,53 @@
+@use '../util' as *;
+
+.top{
+    &__image{
+        padding-top: rem(30);
+        img{
+            width: 100%;
+            width: rem(283);
+            height: rem(211);
+            @include breakpoint(large){
+                width: initial;
+                height: initial;
+            }
+        }
+       
+    }
+    &__heading{
+        padding-top: rem(30);
+        font-weight: 700;
+        font-size: rem(20);
+        color: var(--white);
+        p{
+            color: gray;
+            font-weight: 400;
+            font-size: rem(15);
+            @include breakpoint(large){
+                font-size: rem(40);
+            }
+        }
+        @include breakpoint(large){
+            font-size: rem(50);
+        }
+    }
+    &__btn{
+        margin-top: rem(20);
+        width: rem(220.5);
+        height: rem(43);
+        color: var(--white);
+        font-weight: 500;
+        border-radius: rem(30);
+        background:linear-gradient(
+            to right,
+            var(--btn-gradient-1),
+            var(--btn-gradient-2)
+        );
+        border-style: none;
+        @include breakpoint(large){
+            font-size: rem(20);
+            width: rem(350);
+            height: rem(60);
+        }
+    }
+}

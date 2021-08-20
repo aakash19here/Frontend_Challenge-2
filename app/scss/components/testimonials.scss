@@ -1,0 +1,54 @@
+@use '../util' as *;
+
+
+.testimonials{
+    margin-top:rem(40);
+    display: grid;
+    color: white;
+    
+    p:nth-child(1){
+        padding: rem(18);
+        @include breakpoint(large){
+            margin: rem(40) rem(5);
+        }
+    }
+   
+    
+    gap: rem(30) rem(50);
+    &__1,&__2,&__3{
+        position: relative;
+        box-sizing: content-box;
+        height: 40vh;
+        border-radius: rem(10);
+        background-color: var(--nav-bg);
+        box-shadow: 0 0 20px 1px black;
+        
+    }
+    &__1--name,&__2--name,&__3--name{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        position: absolute;
+        left: 0%;
+        bottom: 0;
+        .bold{
+            font-weight: 700;
+        }
+        .grayy{
+            color: gray;
+        }
+    }
+
+    img{
+        width: rem(80);
+        height: rem(80);
+        margin-left: rem(40);
+        margin: auto auto;
+        border-radius: 50%;
+    }
+    
+
+    @include breakpoint(large){
+        grid-template-columns: repeat(3,1fr);
+    }
+
+}
